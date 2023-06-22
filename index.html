@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+    body {
+        background: rgb(11, 112, 142);
+    }
+    
+    span {
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0.4px 0.4px 0.4px 0px #fff;
+    }
+    
+    .style1 {
+        text-align: center;
+    }
+    
+    .a {
+        position: fixed;
+        top: 100px;
+        left: 10px;
+        width: 60px;
+        text-align: left;
+    }
+    
+    .s {
+        position: fixed;
+        top: 100px;
+        left: 110px;
+        width: 60px;
+        text-align: left;
+    }
+    
+    .s2 {
+        position: fixed;
+        top: 100px;
+        left: 210px;
+        width: 60px;
+        text-align: left;
+    }
+    
+    .g {
+        position: fixed;
+        top: 100px;
+        left: 310px;
+        width: 60px;
+        text-align: left;
+    }
+    
+    .b {
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+    
+    .c {
+        width: 100px;
+        height: 300px;
+        background-color: rgb(117, 247, 188);
+        display: none;
+        /*visibility: hidden;*/
+    }
+    
+    ul {
+        list-style: none;
+        margin-left: -40px;
+    }
+    
+    ul li {
+        line-height: 50px;
+        display: block;
+        width: 60px;
+        text-align: center;
+    }
+    
+    .a:hover .c {
+        display: block;
+    }
+    
+    .s:hover .c {
+        display: inline;
+    }
+    
+    .s2:hover .c {
+        display: block;
+    }
+    
+    .g:hover .c {
+        display: block;
+    }
+    
+    li:hover {
+        background-color: gray;
+        color: #FFFFFF;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <title>Liuyihang's BLOG</title>
+</head>
+
+<body>
+    <header id="header">
+        <div id="header-title" class="style1">
+            <h1>
+                <a href="/" id="logo">Liuyihang's BLOG</a>
+                <br>
+            </h1>
+        </div>
+        <div id="header-inner" class="style2">
+            <nav id="main-nav">
+                <div class="a">
+                    <a href="/about.html">About</a> &nbsp&nbsp
+                    <div class="c">
+                        <ul>
+                            <li>
+                                <p><a href="/list-8-1.html">about1</a></p>
+                                <p><a href="/list-9-1.html">about2</a></p>
+                                <p><a href="/list-10-1.html">about3</a></p>
+                                <p><a href="/list-11-1.html">about4</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="s">
+                    <a class="style2" href="/school.html">School</a> &nbsp&nbsp
+                    <div class="c">
+                        <ul>
+                            <li>
+                                <p><a href="/list-8-1.html">s1</a></p>
+                                <p><a href="/list-9-1.html">s2</a></p>
+                                <p><a href="/list-10-1.html">s3</a></p>
+                                <p><a href="/list-11-1.html">s4</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="s2">
+                    <a class="style2" href="/study.html">Study</a> &nbsp&nbsp
+                    <div class="c">
+                        <ul>
+                            <li>
+                                <p><a href="/list-8-1.html">y1</a></p>
+                                <p><a href="/list-9-1.html">y2</a></p>
+                                <p><a href="/list-10-1.html">y3</a></p>
+                                <p><a href="/list-11-1.html">y4</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="g">
+                    <a class="style2" href="/game.html">Game</a> &nbsp&nbsp
+                    <div class="c">
+                        <ul>
+                            <li>
+                                <p><a href="/list-8-1.html">g1</a></p>
+                                <p><a href="/list-9-1.html">g2</a></p>
+                                <p><a href="/list-10-1.html">g3</a></p>
+                                <p><a href="/list-11-1.html">g4</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        </div>
+        </nav>
+        </div>
+    </header>
+
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+
+    <div class="style1">
+        &copy 2022 liuyihang's blog<br> <br> Powered by Q2072.
+    </div>
+
+    <script>
+        window.onload = function() {
+            var screenW = document.documentElement.clientWidth;
+            var screenH = document.documentElement.clientHeight;
+            var colorArr = ['#fff', 'skyblue', 'orange'];
+            console.log(screenW);
+            for (var i = 0; i < 800; i++) {
+                var span = document.createElement('span');
+                var width = Math.random() * 3;
+                var colorIndex = parseInt(Math.random() * 3);
+                var x = parseInt(Math.random() * screenW);
+                var y = parseInt(Math.random() * screenH);
+                span.style.width = parseInt(width) + 'px';
+                span.style.height = parseInt(width) + 'px';
+                span.style.background = colorArr[colorIndex];
+                span.style.left = x + 'px';
+                span.style.top = y + 'px';
+
+                document.body.appendChild(span);
+            }
+        }
+    </script>
+</body>
+
+</html>
