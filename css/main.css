@@ -66,9 +66,6 @@ a:hover {
     display: none;
 }
 
-
-/*…Ë÷√±≥æ∞Õº∆¨-------ø™ º*/
-
 #banner_img li.item1 {
     background-image: url(../images/banner_bg1.jpg);
     display: block;
@@ -109,8 +106,8 @@ a:hover {
     position: absolute;
     right: 200px;
     top: 30px;
-    width: 759px;
-    height: 606px;
+    width: 640px;
+    height: 512px;
 }
 
 #banner_img .ad_txt {
